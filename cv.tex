@@ -1,0 +1,306 @@
+%% start of file 'cv.tex'.
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[red]{classic}                 % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.84]{geometry}
+\setlength{\hintscolumnwidth}{2.6cm}			% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}   % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                       % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Maxime}
+\familyname{Beugnet}
+\title{Ingénieur en Informatique: Génie Logiciel\newline\mbox{~~~~~~~~~~~~3 années d'expérience}} % optional, remove the line if not wanted
+%\title{\centerline{Ingénieur en Informatique: Génie Logiciel}\newline\centerline{2 années~d'expérience}} % optional, remove the line if not wanted
+%\address{15 rue Victor Hugo}{92400 Courbevoie}	% optional, remove the line if not wanted
+%\mobile{+33 7 81 26 42 16}                              % optional, remove the line if not wanted
+%\phone{phone (optional)}                               % optional, remove the line if not wanted
+%\fax{fax (optional)}                                   % optional, remove the line if not wanted
+%\email{maxime.beugnet@zenika.com}                        % optional, remove the line if not wanted
+%\extrainfo{26 ans, né à Toulouse\\Français, célibataire, sans enfant\\Permis de conduire B} % optional, remove the line if not wanted
+
+%\photo[64pt]{QR_code.png}     % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\photo[200pt]{zenika.jpg}     % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\quote{Développeur passionné de nouvelles technologies.\\Disponible début Avril 2015.}    % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Expériences Professionnelles}
+%\subsection{Vocational}
+
+\cventry
+{Février\ 2015/\\Mars 2015}
+{Consultant Zenika - Développeur Node.js et MongoDB}
+{AXA}
+{Paris et Bruxelles}
+{}
+{\begin{itemize}
+\item Application de filtrage des clients pour des campagnes Marketing,
+\item Découverte et formalisation du besoin client,
+\item Mise en place de l'architecture logicielle,
+\item Design de la base de données MongoDB,
+\item Création d'une API REST Node.js pour exposer les données de MongoDB,
+\item Mise en place d'Elastic pour répondre aux problématiques de performances,
+\item Réalisation d'un générateur aléatoire de clients en Java 8.
+\end{itemize}
+$\rightarrow$ Compétences utilisées: Java 8, Node.js, MongoDB, Elastic, Docker, Codeship, Heroku, Kanban.
+}   % arguments 3 to 6 are optional
+
+\cventry
+{Novembre\ 2013/\\Janvier 2015}
+{Consultant Zenika - Développeur Java/JEE}
+{Galec - E.Leclerc}
+{Ivry-Sur-Seine}
+{}
+{\begin{itemize}
+\item Mises à jour et évolutions en Java/JEE sur l'application ISIS-Offre,
+\item Application interne critique de gestion des produits de E.Leclerc,
+\item Analyse et chiffrage des correctifs et évolutions,
+\item Maintenance et création d'exports PDF avec Jasper,
+\item Montée en compétences sur la méthode Kanban,
+\item Acteur actif du cycle de vie d'une application en TMA,
+\item Formateur pour les nouveaux arrivants sur le projet.
+\end{itemize}
+$\rightarrow$ Compétences utilisées: Java/JEE, Hibernate, Spring, Struts, JUnit, Eclipse, PowerAMC, Jasper, CVS, Kanban.
+}   % arguments 3 to 6 are optional
+
+\cventry
+{Février\ 2013/\\Novembre 2013}
+{Formations et développement personnel}{}{}{}
+{\begin{itemize}
+\item Approfondissement de mes connaissances en Java,
+\item Participation à plusieurs concours d'algorithmique,
+\item Remise à niveau en JEE et approfondissement des bases acquises durant mes études,
+\item Réalisation de projets personnels,
+\item Veille technologique.
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+\cventry
+{Octobre\ 2011/\\Février 2013}
+{Ingénieur Logiciel Embarqué}
+{EADS Astrium}
+{Stevenage (Royaume-Uni)}
+{}
+{\begin{itemize}
+\item Développement du code embarqué en C pour le projet Lisa PathFinder,
+\item Responsable des tests unitaires et des tests en boucle ouverte,
+\item Analyste fonctionnel,
+\item Acteur actif du cycle de vie du logiciel embarqué,
+\item Mise en place, maintenance et optimisation de l'environnement de développement,
+\item Création de scripts d'automatisation de tâches redondantes lourdes,
+\item Optimisation des performances des différents tests et création d'outils de génération de rapports,
+\item Revue de code (relecture croisée) et analyse de la qualité du code,
+\item Responsable de la formation des nouveaux développeurs.
+\end{itemize}
+$\rightarrow$ Compétences utilisées: GNU/Linux, C, MISRA, RTEMS, Java, Script Shell, Makefile, Eclipse, ClearCase, ClearQuest, Cantata++, VectorCast Cover, Rulechecker, Logiscope, Doors.
+}   % arguments 3 to 6 are optional
+
+\cventry
+{Mai 2011/\\Octobre 2011}
+{Ingénieur Logiciel Embarqué - Stage $\mathbf{3^{e}}$ année}
+{EADS Astrium}{Stevenage (Royaume-Uni)}
+{}
+{\begin{itemize}
+\item Aide à la reprise du projet (arrêt sous-traitance),
+\item Mise en place d'une nouvelle stratégie de Tests Unitaires,
+\item Conception d'une librairie de Tests Unitaires pour remplacer Cantata++ (rétroingénierie).
+\end{itemize}
+$\rightarrow$ Compétences utilisées: GNU/Linux, C, Java, Script Shell, Makefile, Eclipse, ClearCase, Cantata++, VectorCast Cover.
+}   % arguments 3 to 6 are optional
+
+\cventry
+{Juin 2010/\\Octobre 2010}
+{Développeur - Stage $\mathbf{2^{de}}$ année}
+{Capgemini}
+{Pau (64)}
+{}
+{\begin{itemize}
+\item Refonte complète de la charte graphique et intégration du CSS,
+\item Réécriture de \emph{Gesper} de Visual Basic (client lourd) en C\# et .NET (client léger) pour \emph{Total}.
+\item Mise en place d'importation massive de données depuis la BDD oracle vers Excel.
+\end{itemize}
+$\rightarrow$ Compétences utilisées: C\#, .NET, HTML, CSS, PL/SQL.
+}   % arguments 3 to 6 are optional
+
+
+\section{Formations}
+
+\cventry{Janvier 2015}
+{Certification officielle MongoDB Développeur}
+{MongoDB, Inc}
+{}
+{}
+{https://university.mongodb.com/exams/verify\_certificate - numéro : 187-063-954}
+
+\cventry{Juillet 2014}
+{Formation Hadoop}
+{Zenika via Pivotal}
+{}
+{}
+{Formation de 4 jours.}
+
+\cventry{Juin 2014}
+{Formation Hibernate}
+{Zenika}
+{}
+{}
+{Formation de 2 jours.}
+
+\cventry{Mars 2014}
+{Formation MongoDB}
+{Développement personnel}
+{}
+{}
+{Formation M101J du site https://university.mongodb.com/}
+
+\cventry{2008--2011}
+{Diplôme d'Ingénieur en Informatique}
+{\'Ecole Internationale des Sciences du Traitement de l’Information (EISTI)}
+{Pau (64) et Cergy-Pontoise (95)}
+{}
+{Option Génie Logiciel.}
+
+\cventry{2006--2008}
+{Classes préparatoires aux grandes écoles}
+{Lycée Saliège}
+{Balma (31)}
+{}
+{Math Sup/Spé option Physique \& Chimie.}
+
+\cventry{2006}
+{Baccalauréat Scientifique}
+{Lycée}
+{Saint-Orens de Gameville (31)}
+{Mention AB}
+{Option mathématiques spéciales.}
+
+\section{Compétences}
+
+\subsection{Informatiques}
+\cvline{Java/JEE}{Pratique constante depuis 2009.} 
+\cvline{Node.js}{En cours d'apprentissage.}
+\cvline{Frameworks}{Hibernate, Spring, Struts, XStream, Mockito, Junit, AssertJ, Apache Commons.}
+\cvline{BDD}{MongoDB, Elastic, PostgreSQL, DB2, PL/SQL.}
+\cvline{BigData}{Hadoop.}
+\cvline{Autres langages}{C, C\#, Script Shell, HTML, CSS, Javascript.}
+\cvline{Systèmes}{GNU/Linux.}
+\cvline{Outils}{IntelliJ, Eclipse, Docker, Tomcat, Maven, Git, ClearCase, ClearTool, Subversion, Bazaar, CVS, VSS.}
+\cvline{Méthodologies}{Craftmanship, TDD, Kanban.}
+\cvline{Standards}{ECSS, MISRA, W3C.}
+
+\subsection{Langues}
+\cvlanguage{Anglais}{Bilingue}{}
+\cvlanguage{Espagnol}{Scolaire}{}
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+%\newpage{}
+
+\section{Activité Meetup \& Conférences}
+\cvlistdoubleitem{Paris JUG}{Devoxx 2014 \& 2015}
+\cvlistdoubleitem{Software Craftmanship Paris}{Docker Paris}
+\cvlistdoubleitem{Paris MongoDB User Group}{Global Day of CodeRetreat}
+\cvlistdoubleitem{Dev4Fun}{}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+\section{Compétitions de programmation}
+%\cvline{hobby 1}{\small Description}
+%\cvline{hobby 2}{\small Description}
+%\cvline{hobby 3}{\small Description}
+
+\cventry
+{Depuis 2013}
+{CodinGame}
+{}
+{\url{http://www.codingame.com}}
+{}
+{Participation mensuelle aux compétitions avec Java.}
+
+\cventry
+{Depuis 2012}
+{Google Jam Code}
+{}
+{\url{http://code.google.com/codejam}}
+{}
+{Concours annuel mondial de résolution de problèmes algorithmiques; utilisation de Java.}
+
+%\cventry
+%{Septembre 2013}
+%{CodinGame}
+%{}
+%{\url{http://www.codingame.com}}
+%{}
+%{Concours de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $226^{e}$ sur 1124 participants.}
+
+%\cventry
+%{Juillet 2013}
+%{CodinGame}
+%{}
+%{\url{http://www.codingame.com}}
+%{}
+%{Concours de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $128^{e}$ sur 759 participants.}
+
+%\cventry
+%{Avril/Mai 2013}
+%{Google Jam Code}
+%{}
+%{\url{http://code.google.com/codejam}}
+%{}
+%{Concours mondial de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $5319^{e}$ sur 21278 participants.}
+
+\cventry
+{Août 2012}
+{Code of Duty 2}
+{}
+{\url{http://labs.criteo.com/code-of-duty-2/}}
+{}
+{Concours de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : Dans les 100 premiers parmi plus de 2100 participants.}
+
+%\cventry
+%{Avril/Mai 2012}
+%{Google Jam Code}
+%{}
+%{\url{http://code.google.com/codejam}}
+%{}
+%{Concours mondial de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $1876^{e}$ sur 19464 participants.}
+
+\cventry
+{Janvier 2012}
+{Queue ICPC Challenge}
+{}
+{\url{http://queue.acm.org/icpc/}}
+{}
+{Tournoi d'Intelligences Artificielles; utilisation de Java\\Résultat final : $13^{e}$ sur 53 participants.}
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\section{Intérêts}
+%\cvlistdoubleitem{Tir à l'arc}{Cinéma}
+%\cvlistdoubleitem{Natation}{Musique}
+%\cvlistdoubleitem{Squash}{Rubik's Cube}
+
+% Publications from a BibTeX file
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\end{document}
+
