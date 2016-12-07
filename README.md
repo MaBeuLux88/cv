@@ -29,7 +29,7 @@ Run the `./docker-build.sh` to produce a new image.
 
 When you want to generate the PDF just run `./docker-run.sh`.
 
-This image basically contains the Debian packages required for this project to compile. It will execute the entrypoint.sh script inside the container, build all the stuff and destroy the container automatically :-).
+This image basically contains the Debian packages required for this project to compile. It will execute the `entrypoint.sh` script inside the container, build all the stuff and destroy the container automatically :-).
 
 It doesn't use any volume has the current path is mapped into the container.
 
