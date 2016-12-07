@@ -82,7 +82,7 @@ $(EPSSDIR)%.eps : $(FIGSDIR)%.fig
 	fig2dev -L eps $< > $@
 
 #generation des repertoires au debut du projet
-dir :
+dir : 
 	$(MKDIR) $(EPSSDIR) $(IMGSDIR) $(FIGSDIR) $(INCDIR)
 
 #Pour clean, on supprime tous les fichiers generes sauf le pdf
