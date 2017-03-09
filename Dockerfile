@@ -12,4 +12,5 @@ RUN apt-get -y update \
     && rm -rf /tmp/*
 WORKDIR /home
 ADD entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
