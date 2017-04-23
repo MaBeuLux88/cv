@@ -17,7 +17,7 @@ Then you just need to run the `./entrypoint.sh`
 The Makefile has different targets : 
 * `make dir` can create the folders content, epss, figs and imgs,
 * `make clean` or `make very-clean` can clean generated files,
-* `make` (default) convert the JPG and PNG images to EPS format into the epss folder. Then it compiles and assemble all the tex files to build the final PDF file.
+* `make` (default) convert the JPG and PNG images to EPS format into the epss folder. Then it compiles and assembles all the tex files to build the final PDF file.
 
 Note : If you don't want to convert image and you prefer to use directly JPG or PNG in your tex files. You can bypass everything by just running `pdflatex cv.tex` twice (the second run makes sure all the parts are correctly in place in the PDF).
 
