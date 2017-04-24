@@ -3,7 +3,7 @@
 
 % moderncv themes
 %\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[red]{classic}                 % idem
+\moderncvtheme[blue]{classic}                 % idem
 
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
@@ -25,11 +25,23 @@
 %\phone{phone (optional)}                               % optional, remove the line if not wanted
 %\fax{fax (optional)}                                   % optional, remove the line if not wanted
 \email{maxime.beugnet@gmail.com}                        % optional, remove the line if not wanted
-\extrainfo{29 y.o., born in Toulouse, FRANCE\\French, single, no child\\Driving Licence} % optional, remove the line if not wanted
+\extrainfo{29 y.o., born in Toulouse - France\\French, single, no child\\Driving Licence} % optional, remove the line if not wanted
 
 \photo[85pt]{epss/id.eps}     % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 %\quote{Développeur passionné de nouvelles technologies.}    % optional, remove the line if not wanted
-\quote{Passionate developer, Open Source and new technologies enthusiast, I like to describe myself as a pragmatic Software Craftsman. I'm a Java and official MongoDB trainer. I am a certified MongoDB developer and DBA and I also have several Couchbase certifications. I have also been co-leading the MongoDB User Group Paris and Dev4Fun Meetups for the past 2 years now. I frequent the Software Craftsmanship Meetup regularly and I have a special interest in BigData}    % optional, remove the line if not wanted
+\quote{Passionate developer, Open Source and new technologies enthusiast, I like to describe myself as a pragmatic Software Craftsman.
+\newline\newline
+I'm a Java and official MongoDB trainer with various certifications like MongoDB developer (C100DEV) and MongoDB DBA (C100DBA) and I also have several Couchbase certifications.
+\newline\newline
+I have also been co-leading the MongoDB User Group Paris and Dev4Fun Meetups for the past 2 years. I frequent the Software Craftsmanship Meetup regularly and I have a special interest in BigData as well.}    % optional, remove the line if not wanted
+
+% trying to change the quote width
+\usepackage{etoolbox}
+\patchcmd{\recomputecvlengths}{%
+  \setlength{\quotewidth}{0.65\textwidth}%
+}{%
+  \setlength{\quotewidth}{0.9\textwidth}%
+}{}{}
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -55,7 +67,7 @@
 }   % arguments 3 to 6 are optional
 
 \cventry
-{January 2016}
+{Since January 2016}
 {Zenika Consultant- Tech Lead Java/JEE and BigData}
 {SFR-Numéricable}
 {Paris}
@@ -171,8 +183,8 @@ $\rightarrow$ Skills: IntelliJ, Java/JEE, AngularJS, Spring, Hibernate, MySQL, J
 }   % arguments 3 to 6 are optional
 
 \cventry
-{10-12 \& 16-19\\ Juin 2015}
-{Consultant Zenika - Formateur MongoDB}
+{10-12 \& 16-19\\ June 2015}
+{Zenika Consultant- MongoDB Trainer}
 {ATOS Worldline}
 {Seclin et Lyon}
 {}
@@ -183,104 +195,105 @@ $\rightarrow$ Skills: IntelliJ, Java/JEE, AngularJS, Spring, Hibernate, MySQL, J
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Mai 2015}
-{Zenika Consultant - MongoDB Audit}
+{May 2015}
+{Consultant Zenika - Audit MongoDB}
 {Réputation VIP}
 {Lyon}
 {}
 {\begin{itemize}
-\item \'Etude du modèle de données existant et du besoin client,
-\item Refonte complète du modèle de données,
-\item Optimisation des indexes et des requêtes cruciales,
-\item \'Etudes des logs pour résoudre les problèmes d'instabilité du cluster,
-\item Conseils pratiques et réduction global des coûts sur AWS.
+\item Study of the existing data model and customer need,
+\item Complete redesign of the data model,
+\item Optimization of indexes and critical queries,
+\item Studies of logs to solve the problems of instability of the cluster,
+\item Practical tips and overall cost reduction on AWS.
 \end{itemize}
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Février\ 2015/\\Mars 2015}
-{Consultant Zenika - Développeur Node.js et MongoDB}
+{February\ 2015/\\March 2015}
+{Zenika Consultant- Node.js \& MongoDB Developer}
 {AXA}
-{Paris et Bruxelles}
+{Paris and Bruxelles}
 {}
 {\begin{itemize}
-\item Application de filtrage des clients pour des campagnes Marketing,
-\item Découverte et formalisation du besoin client,
-\item Mise en place de l'architecture logicielle,
-\item Design de la base de données MongoDB,
-\item Création d'une API REST Node.js pour exposer les données de MongoDB,
-\item Mise en place d'Elastic pour répondre aux problématiques de performances,
-\item Réalisation d'un générateur aléatoire de clients en Java 8.
+\item Client filtering application for marketing campaigns,
+\item Discovery and formalization of customer needs,
+\item Establishing the software architecture,
+\item Design of the MongoDB database,
+\item Creating a REST Node.js API to expose MongoDB data,
+\item Setup of Elastic to improve critical response time,
+\item Creating a random client generator in Java 8.
 \end{itemize}
 $\rightarrow$ Skills: Java 8, Node.js, MongoDB, Elastic, Docker, Codeship, Heroku, Kanban.
 }   % arguments 3 to 6 are optional
 
 \cventry
 {Novembre\ 2013/\\Janvier 2015}
-{Consultant Zenika - Développeur Java/JEE}
+{Zenika Consultant - Java/JEE Developer}
 {Galec - E.Leclerc}
 {Ivry-Sur-Seine}
 {}
 {\begin{itemize}
-\item Mises à jour et évolutions en Java/JEE sur l'application ISIS-Offre,
-\item Application interne critique de gestion des produits de E.Leclerc,
-\item Analyse et chiffrage des correctifs et évolutions,
-\item Maintenance et création d'exports PDF avec Jasper,
-\item Montée en compétences sur la méthode Kanban,
-\item Acteur actif du cycle de vie d'une application en TMA,
-\item Formateur pour les nouveaux arrivants sur le projet.
+\item Updates and evolutions in Java/JEE on the ISIS-Offre application,
+\item Internal critical product management application of E.Leclerc,
+\item Analysis and quantification of corrections and evolutions,
+\item Maintenance and creation of PDF exports with Jasper,
+\item Raised skills on the Kanban method,
+\item Active actor of an application's lifecycle in TMA,
+\item Trainer for newcomers to the project.
 \end{itemize}
 $\rightarrow$ Skills: Java/JEE, Hibernate, Spring, Struts, JUnit, Eclipse, PowerAMC, Jasper, CVS, Kanban.
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Février\ 2013/\\Novembre 2013}
-{Formations et développement personnel}{}{}{}
+{February\ 2013/\\November 2013}
+{Training and personnal development}{}{}{}
 {\begin{itemize}
-\item Approfondissement de mes connaissances en Java,
-\item Participation à plusieurs concours d'algorithmique,
-\item Remise à niveau en JEE et approfondissement des bases acquises durant mes études,
-\item Réalisation de projets personnels,
-\item Veille technologique.
+\item Deepening my knowledge in Java,
+\item Participation in several algorithmic competitions,
+\item Refresher course in JEE and deepening of the basics acquired during my studies,
+\item Realization of personal projects,
+\item Technology watch.
 \end{itemize}
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Octobre\ 2011/\\Février 2013}
-{Ingénieur Logiciel Embarqué}
-{EADS Astrium}
-{Stevenage (Royaume-Uni)}
+{October\ 2011/\\February 2013}
+{Embedded Software Engineer}
+{EADS Astrium (Airbus Defense and Space now)}
+{Stevenage United Kingdom}
 {}
 {\begin{itemize}
-\item Développement du code embarqué en C pour le projet Lisa PathFinder,
-\item Responsable des tests unitaires et des tests en boucle ouverte,
-\item Analyste fonctionnel,
-\item Acteur actif du cycle de vie du logiciel embarqué,
-\item Mise en place, maintenance et optimisation de l'environnement de développement,
-\item Création de scripts d'automatisation de tâches redondantes lourdes,
-\item Optimisation des performances des différents tests et création d'outils de génération de rapports,
-\item Revue de code (relecture croisée) et analyse de la qualité du code,
-\item Responsable de la formation des nouveaux développeurs.
+\item Development of embedded code in C for the Lisa PathFinder project,
+\item Responsible for unit testing and open-loop testing,
+\item Functional analyst,
+\item An active member of the embedded software lifecycle,
+\item Installation, maintenance and optimization of the development environment,
+\item Creating scripts to automate heavy redundant tasks,
+\item Optimize the performance of different tests and create reporting tools,
+\item Code review (bidirectional code reviews) and quality code analysis,
+\item Responsible for the training of new developers.
 \end{itemize}
 $\rightarrow$ Skills: GNU/Linux, C, MISRA, RTEMS, Java, Script Shell, Makefile, Eclipse, ClearCase, ClearQuest, Cantata++, VectorCast Cover, Rulechecker, Logiscope, Doors.
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Mai 2011/\\Octobre 2011}
-{Ingénieur Logiciel Embarqué - Stage $\mathbf{3^{e}}$ année}
-{EADS Astrium}{Stevenage (Royaume-Uni)}
+{May 2011/\\October 2011}
+{Embedded Software Engineer - Internship $\mathbf{3^{rd}}$ year}
+{EADS Astrium}
+{Stevenage - United Kingdom}
 {}
 {\begin{itemize}
-\item Aide à la reprise du projet (arrêt sous-traitance),
-\item Mise en place d'une nouvelle stratégie de Tests Unitaires,
-\item Conception d'une librairie de Tests Unitaires pour remplacer Cantata++ (rétroingénierie).
+\item Support for project resumption (stop subcontracting),
+\item Implementation of a new strategy for Unit Tests,
+\item Design of a Unit Test library to replace Cantata++ (reverse engineering).
 \end{itemize}
 $\rightarrow$ Skills: GNU/Linux, C, Java, Script Shell, Makefile, Eclipse, ClearCase, Cantata++, VectorCast Cover.
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Juin 2010/\\Octobre 2010}
-{Développeur - Stage $\mathbf{2^{de}}$ année}
+{June 2010/\\October 2010}
+{Developer - Internship $\mathbf{2^{nd}}$ année}
 {Capgemini}
 {Pau (64)}
 {}
@@ -288,6 +301,9 @@ $\rightarrow$ Skills: GNU/Linux, C, Java, Script Shell, Makefile, Eclipse, Clear
 \item Refonte complète de la charte graphique et intégration du CSS,
 \item Réécriture de \emph{Gesper} de Visual Basic (client lourd) en C\# et .NET (client léger) pour \emph{Total}.
 \item Mise en place d'importation massive de données depuis la BDD oracle vers Excel.
+\item Complete redesign of the application and integration of CSS,
+\item Rewrite \emph{Gesper} from Visual Basic (rich client) to C\# and .NET (thin client) for \emph{Total}.
+\item Implement massive data export from the Oracle Database to Excel.
 \end{itemize}
 $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 }   % arguments 3 to 6 are optional
@@ -295,61 +311,61 @@ $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 
 \section{Formations}
 
-\cventry{Avril 2015}
-{Certification officielle MongoDB Administrateur}
+\cventry{April 2015}
+{MongoDB DBA Official Certification}
 {MongoDB, Inc}
 {}
 {}
 {https://university.mongodb.com/exams/verify\_certificate - numéro : 497-369-558}
 
 \cventry{Janvier 2015}
-{Certification officielle MongoDB Développeur}
+{MongoDB Developer Official Certification}
 {MongoDB, Inc}
 {}
 {}
 {https://university.mongodb.com/exams/verify\_certificate - numéro : 187-063-954}
 
-\cventry{Juillet 2014}
-{Formation Hadoop}
+\cventry{July 2014}
+{Hadoop Training}
 {Zenika via Pivotal}
 {}
 {}
-{Formation de 4 jours.}
+{4 days training.}
 
-\cventry{Juin 2014}
-{Formation Hibernate}
+\cventry{June 2014}
+{Hibernate Formation}
 {Zenika}
 {}
 {}
-{Formation de 2 jours.}
+{2 jours training.}
 
-\cventry{Mars--Décembre 2014}
-{Formation MongoDB}
-{Développement personnel}
+\cventry{March--December 2014}
+{MongoDB Training}
+{Personnel development}
 {}
 {}
-{Formation M101J, M102, M202 du site https://university.mongodb.com/}
+{M101J, M102, M202 Training from https://university.mongodb.com/}
 
 \cventry{2008--2011}
-{Diplôme d'Ingénieur en Informatique}
+{Diploma in Computer Engineering}
 {\'Ecole Internationale des Sciences du Traitement de l’Information (EISTI)}
-{Pau (64) et Cergy-Pontoise (95)}
+{Pau (64) and Cergy-Pontoise (95)}
 {}
-{Option Génie Logiciel.}
+{Option Software Engineering}
 
 \cventry{2006--2008}
-{Classes préparatoires aux grandes écoles}
-{Lycée Saliège}
+{High School Preparatory Classes}
+{High School}
 {Balma (31)}
 {}
-{Math Sup/Spé option Physique \& Chimie.}
+{Preparatory classes for high scientific school in Mathematics, Physics \& Chemistry}
 
 \cventry{2006}
-{Baccalauréat Scientifique}
-{Lycée}
+{Scientific Baccalaureate}
+{High School}
 {Saint-Orens de Gameville (31)}
-{Mention AB}
-{Option mathématiques spéciales.}
+{With honours.}
+{Option Special Mathematics.}
 
 \section{Skills}
 
