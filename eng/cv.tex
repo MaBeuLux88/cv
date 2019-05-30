@@ -25,7 +25,7 @@
 \email{maxime.beugnet@gmail.com}                        % optional, remove the line if not wanted
 \extrainfo{29 y.o., born in Toulouse - France\\French, single, no children\\Driving Licence} % optional, remove the line if not wanted
 
-\photo[85pt]{epss/id.eps}     % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\photo[85pt]{epss/headshot.eps}     % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 %\quote{Développeur passionné de nouvelles technologies.}    % optional, remove the line if not wanted
 \quote{Passionate developer, Open Source and new technologies enthusiast, I like to describe myself as a pragmatic Software Craftsman.
 \newline\newline
@@ -34,12 +34,10 @@ I am a Java and official MongoDB trainer with various certifications like MongoD
 I have also been co-leading the MongoDB User Group Paris and Dev4Fun Meetups for the past 2 years. I attend the Software Craftsmanship Meetup regularly and I have a special interest in Artificial Intelligences and BigData as well.}    % optional, remove the line if not wanted
 
 % change the quote width
-\usepackage{etoolbox}
-\patchcmd{\recomputecvlengths}{%
-  \setlength{\quotewidth}{0.65\textwidth}%
-}{%
-  \setlength{\quotewidth}{0.91\textwidth}%
-}{}{}
+\let\originalrecomputecvlengths\recomputecvlengths
+\renewcommand*{\recomputecvlengths}{%
+\originalrecomputecvlengths%
+\setlength{\quotewidth}{0.92\textwidth}}
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %\renewcommand{\listitemsymbol}{-} % change the symbol for lists
