@@ -1,0 +1,158 @@
+% start of file 'cv.tex'.
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                 % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+\setlength{\hintscolumnwidth}{3.6cm}			% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}   % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                       % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Claire}
+\familyname{Beugnet}
+\title{\centerline{Étudiante en faculté de}\newline\centerline{chirurgie dentaire}} % optional, remove the line if not wanted
+%\title{\centerline{Ingénieur en Informatique: Génie Logiciel}\newline\centerline{2 années~d'expérience}} % optional, remove the line if not wanted
+\address{22 Avenue des Tilleuls}{31280 Mons}	% optional, remove the line if not wanted
+\mobile{+33 6 21 48 04 28}                              % optional, remove the line if not wanted
+%\phone{phone (optional)}                               % optional, remove the line if not wanted
+%\fax{fax (optional)}                                   % optional, remove the line if not wanted
+\email{claire.beugnet3@gmail.com}                       % optional, remove the line if not wanted
+\extrainfo{22 ans, née à Toulouse\\Française, célibataire, sans enfant\\Permis de conduire B depuis Juillet 2014} % optional, remove the line if not wanted
+
+%\photo[64pt]{QR_code.png}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\quote{\LARGE{Je suis à la recherche d'un enseignement de M1.}}    % optional, remove the line if not wanted
+
+% change the quote width
+\let\originalrecomputecvlengths\recomputecvlengths
+\renewcommand*{\recomputecvlengths}{%
+\originalrecomputecvlengths%
+\setlength{\quotewidth}{0.92\textwidth}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Expériences Professionnelles}
+%\subsection{Vocational}
+
+\cventry
+{Mai - Juillet 2019}
+{Livreuse}
+{CERP}
+{}
+{}
+{}   % arguments 3 to 6 are optional
+
+\cventry
+{Sept 2017 - Nov 2018}
+{Préparatrice de commande}
+{CERP}
+{}
+{}
+{}   % arguments 3 to 6 are optional
+
+\cventry
+{Été 2017}
+{Préparatrice de commande et livreuse}
+{CERP}
+{}
+{}
+{}  % arguments 3 to 6 are optional
+
+\cventry
+{Été 2016}
+{Préparatrice de commande}
+{CERP}
+{}
+{}
+{\begin{itemize}
+\item Remplissage des rayons et de l'automate.
+\item Travail en équipe.
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+
+\section{Formations}
+\cventry
+{2016 - 2020}
+{Faculté de chirurgie dentaire}
+{}
+{Toulouse}
+{}
+{\begin{itemize}
+\item Deuxième à cinquième années.
+\item M1 - Méthodologie en anatomie pathologique et en histologie.
+\item M1 - Éthique, droit et déontologie.
+\item Stage de recherche sur les profils de patients sous MEOPA.
+\end{itemize}
+}
+
+\cventry
+{2016}
+{PACES, Diplôme d'état en médecine}
+{Faculté de médecine - Rangueil}
+{Toulouse}
+{}
+{}
+
+\cventry
+{2011 - 2014}
+{Baccalauréat}
+{Lycée Pierre de Fermat}
+{Toulouse}
+{}
+{\begin{itemize}
+\item Mention Très Bien.
+\item Série S - SVT Spécialité Sciences Physiques et Chimiques.
+\end{itemize}
+}
+
+\cventry
+{2011}
+{Brevet National des Collèges}
+{Collège Paul Cézanne}
+{Montrabé}
+{}
+{\begin{itemize}
+\item Mention Très Bien.
+\end{itemize}
+}
+
+\section{Compétences Linguistiques}
+\cvlanguage{Anglais}
+{Niveau scolaire (7 ans) et voyages linguistiques}{}
+\cvlanguage{Espagnol}
+{Niveau scolaire (7 ans) et voyages linguistiques}{}
+\cvlanguage{Portugais}
+{Niveau scolaire (3 ans) et voyages linguistiques}{}
+
+\section{Intérêts}
+\cvlistdoubleitem{Équitation}{Natation}
+\cvlistdoubleitem{Plongée}{Guitare}
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+%\newpage{}
+
+% Publications from a BibTeX file
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\end{document}
+
