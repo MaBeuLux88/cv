@@ -1,15 +1,16 @@
-% start of file 'cv.tex'.
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
 %\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{classic}                 % idem
+\moderncvtheme[red]{classic}                 % idem
 
 % character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+%\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[T1]{fontenc}
+\usepackage{ifsym}                              % For the textifsymbol command and the home icon in the address
 
 % adjust the page margins
-\usepackage[scale=0.84]{geometry}
+\usepackage[scale=0.85]{geometry}
 \setlength{\hintscolumnwidth}{2.6cm}			% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}   % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 \AtBeginDocument{\recomputelengths}                       % required when changes are made to page layout lengths
@@ -17,21 +18,23 @@
 % personal data
 \firstname{Maxime}
 \familyname{Beugnet}
-\title{\mbox{~~~~~~~~~~~~IT engineer}\newline\mbox{~~~~~~Software engineering}} % optional, remove the line if not wanted
-\address{207 Les Jardins de l'Arche}{92000 Nanterre}	% optional, remove the line if not wanted
+\title{\mbox{~~~~~Software Engineer}\newline\mbox{Senior Developer Advocate}\newline\mbox{MongoDB \& Java Expert}} % optional, remove the line if not wanted
+\address{\textifsymbol{18} 31240 L'Union - France}	% optional, remove the line if not wanted
+\born{37 y.o. - Born in Toulouse - France}
 \mobile{+33 7 81 26 42 16}                              % optional, remove the line if not wanted
+\email{maxime.beugnet@gmail.com}                        % optional, remove the line if not wanted
 %\phone{phone (optional)}                               % optional, remove the line if not wanted
 %\fax{fax (optional)}                                   % optional, remove the line if not wanted
-\email{maxime.beugnet@gmail.com}                        % optional, remove the line if not wanted
-\extrainfo{29 y.o., born in Toulouse - France\\French, single, no children\\Driving Licence} % optional, remove the line if not wanted
+\extrainfo{French, legally partnered, 1 son (3 y.o.)\\Driving Licence} % optional, remove the line if not wanted
 
 \photo[85pt]{epss/headshot.eps}     % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 %\quote{Développeur passionné de nouvelles technologies.}    % optional, remove the line if not wanted
-\quote{Passionate developer, Open Source and new technologies enthusiast, I like to describe myself as a pragmatic Software Craftsman.
+\quote{Passionate developer, open source and new technologies enthusiast, I like to describe myself as a pragmatic software craftsman.
 \newline\newline
-I am a Java and official MongoDB trainer with various certifications like MongoDB developer (C100DEV), MongoDB DBA (C100DBA) and several Couchbase certifications.
+After over 6 years at MongoDB and earning certifications as a MongoDB Developer and DBA, I am fully prepared to elevate your MongoDB projects to the next level. I have delivered countless public conferences and Meetups to foster the MongoDB Community and help MongoDB reach its full potential.
 \newline\newline
-I have also been co-leading the MongoDB User Group Paris and Dev4Fun Meetups for the past 2 years. I attend the Software Craftsmanship Meetup regularly and I have a special interest in Artificial Intelligences and BigData as well.}    % optional, remove the line if not wanted
+I'm passionate about programming competitions and have a keen interest in AI and Big Data.
+}
 
 % change the quote width
 \let\originalrecomputecvlengths\recomputecvlengths
@@ -48,8 +51,25 @@ I have also been co-leading the MongoDB User Group Paris and Dev4Fun Meetups for
 \begin{document}
 \maketitle
 
-\section{Work experiences}
+\section{Work experiences}\label{sec:work-experiences}
 %\subsection{Vocational}
+
+\cventry
+{February 2018/ July 2024}
+{Developer Advocate \& Senior Developer Advocate}
+{MongoDB Inc.}
+{Full remote - Paris}
+{}
+{\begin{itemize}
+     \item International public speaker (France, Spain, USA, Germany, United Kingdom, Poland, Czechia, Croatia, Denmark, Switzerland, ...),
+     \item Master of ceremonies at MongoDB .local events,
+     \item Keynote Speaker: Co-presented the MongoDB .local Paris 2022 keynote alongside MongoDB's CTO (Mark Porter),
+     \item In charge of all the Java content creation at MongoDB (blog posts, videos, live streams, YouTube shorts, GitHub sample projects),
+     \item Meetups: I was running the MongoDB Paris User Group in Paris for 9 years and other meetup groups in Europe,
+     \item One of the top contributor on the MongoDB Developer Community Forums \url{https://www.mongodb.com/community/forums/u/mabeulux88\_xxx/summary}.
+\end{itemize}
+$\rightarrow$ Skills: MongoDB, Java, Spring Data MongoDB, Spring Boot, Python, JavaScript, Docker, GitHub, React, React Native.
+}   % arguments 3 to 6 are optional
 
 \cventry
 {June 2016}
@@ -58,28 +78,28 @@ I have also been co-leading the MongoDB User Group Paris and Dev4Fun Meetups for
 {Lyon}
 {}
 {\begin{itemize}
-\item Analysis of customer needs and volumetry,
-\item Design of the Sharded Cluster architecture,
-\item Cost optimisation and live demos.
+    \item Analysis of customer needs and volumetry,
+    \item Design of the Sharded Cluster architecture,
+    \item Cost optimisation and live demos.
 \end{itemize}
 }   % arguments 3 to 6 are optional
 
 \cventry
-{Since January 2016}
-{Zenika Consultant - Tech Lead Java/JEE and BigData}
+{January 2016/ February 2018}
+{Zenika Consultant - Tech Lead Java/JEE and Big Data}
 {SFR-Numéricable}
 {Paris}
 {}
 {\begin{itemize}
-\item Recovery of the Java/JEE Backend TV SFR project (general public application),
-\item Responsible of the Backend operating 3 millions TV decoders in production,
-\item Management and developement from the requirements to the production,
-\item Architecture : Analyse and preparation for a rewriting,
-\item CraftsmanShip : Code upkeep and improvements,
-\item Migration from MySQL to Couchbase and from a Glassfish Cluster to Tomcat,
-\item Reworking the Maven organisation,
-\item Migrate almost all the production to Docker,
-\item Development of new projects from scratch.
+    \item Recovery of the Java/JEE Backend TV SFR project (general public application),
+    \item Responsible for the Backend operating 3 millions TV decoders in production,
+    \item Management and development from the requirements to the production,
+    \item Architecture: Analysis and preparation for a rewriting,
+    \item Craftsmanship: Code upkeep and improvements,
+    \item Migration from MySQL to Couchbase and from a Glassfish Cluster to Tomcat,
+    \item Reworking the Maven organisation,
+    \item Migrate all the production environment to Docker,
+    \item Development of new projects from scratch.
 \end{itemize}
 $\rightarrow$ Skills: IntelliJ, Java/JEE, Spring, Glassfish, Tomcat, Mysql, Couchbase, Docker, Maven, Atlassian Suite (Jira, Confluence, Bitbucket, Bamboo).
 }   % arguments 3 to 6 are optional
@@ -91,8 +111,8 @@ $\rightarrow$ Skills: IntelliJ, Java/JEE, Spring, Glassfish, Tomcat, Mysql, Couc
 {Reims}
 {}
 {\begin{itemize}
-\item Creation of a web platform to dematerialise the professional interviews,
-\item Assistance in the formalisation of the needs and production of the web pages.
+    \item Creation of a web platform to dematerialise the professional interviews,
+    \item Assistance in the formalisation of the needs and production of the web pages.
 \end{itemize}
 $\rightarrow$ Skills: IntelliJ, Maven, AngularJS, Bootstrap, JQuery, HTML5, CSS3.
 }   % arguments 3 to 6 are optional
@@ -104,8 +124,8 @@ $\rightarrow$ Skills: IntelliJ, Maven, AngularJS, Bootstrap, JQuery, HTML5, CSS3
 {Paris}
 {}
 {\begin{itemize}
-\item Update on the import/export Excel system,
-\item Bugs analysis and cost estimation.
+    \item Update on the import/export Excel system,
+    \item Bug analysis and cost estimation.
 \end{itemize}
 $\rightarrow$ Skills: Eclipse, Java/JEE, Hibernate, SQL.
 }   % arguments 3 to 6 are optional
@@ -117,10 +137,10 @@ $\rightarrow$ Skills: Eclipse, Java/JEE, Hibernate, SQL.
 {Paris}
 {}
 {\begin{itemize}
-\item Development on a software architecture design project,
-\item Full autonomy on the project,
-\item Increased capabilities of Eclipse RCP,
-\item Setup a continuous integration and delivery platform with Vagrant and Atlassian.
+    \item Development on a software architecture design project,
+    \item Full autonomy on the project,
+    \item Increased capabilities of Eclipse RCP,
+    \item Set up a continuous integration and delivery platform with Vagrant and Atlassian.
 \end{itemize}
 $\rightarrow$ Skills: IntelliJ, Java/JEE, AngularJS, Spring, Hibernate, MySQL, Jira, Stash, Git, Jenkins, Bamboo.
 }   % arguments 3 to 6 are optional
@@ -132,11 +152,11 @@ $\rightarrow$ Skills: IntelliJ, Java/JEE, AngularJS, Spring, Hibernate, MySQL, J
 {Lyon}
 {}
 {\begin{itemize}
-\item Study of the existing data model and customer need,
-\item Complete redesign of the data model,
-\item Indexes and critical queries optimisation,
-\item Logs analyses to solve the cluster's instabilities,
-\item Practical tips and overall cost reduction on AWS.
+    \item Study of the existing data model and customer need,
+    \item Complete redesign of the data model,
+    \item Indexes and critical queries optimisation,
+    \item Logs analyses to solve the cluster's instabilities,
+    \item Practical tips and overall cost reduction on AWS.
 \end{itemize}
 }   % arguments 3 to 6 are optional
 
@@ -147,13 +167,13 @@ $\rightarrow$ Skills: IntelliJ, Java/JEE, AngularJS, Spring, Hibernate, MySQL, J
 {Paris and Bruxelles}
 {}
 {\begin{itemize}
-\item Client filtering application for marketing campaigns,
-\item Discovery and formalisation of customer needs,
-\item Establishing the software architecture,
-\item Design of the MongoDB model and architecture,
-\item Creating a REST Node.js API to expose MongoDB data,
-\item Setup of Elastic to improve critical response time,
-\item Creating a random JSON document generator in Java 8.
+    \item Client filtering application for marketing campaigns,
+    \item Discovery and formalisation of customer needs,
+    \item Establishing the software architecture,
+    \item Design of the MongoDB model and architecture,
+    \item Creating a REST Node.js API to expose MongoDB data,
+    \item Setup of Elastic to improve critical response time,
+    \item Creating a random JSON document generator in Java 8.
 \end{itemize}
 $\rightarrow$ Skills: Java 8, Node.js, MongoDB, Elastic, Docker, Codeship, Heroku, Kanban.
 }   % arguments 3 to 6 are optional
@@ -165,26 +185,26 @@ $\rightarrow$ Skills: Java 8, Node.js, MongoDB, Elastic, Docker, Codeship, Herok
 {Ivry-Sur-Seine}
 {}
 {\begin{itemize}
-\item Updates and evolutions in Java/JEE on the ISIS-Offre application,
-\item Internal critical product management application of E.Leclerc,
-\item Analysis and quantification of corrections and evolutions,
-\item Maintenance and creation of PDF exports with Jasper,
-\item Raised skills on the Kanban method,
-\item Active actor of an application's lifecycle in TMA,
-\item Trainer for newcomers to the project.
+    \item Updates and evolutions in Java/JEE on the ISIS-Offre application,
+    \item Internal critical product management application of E.Leclerc,
+    \item Analysis and quantification of corrections and evolutions,
+    \item Maintenance and creation of PDF exports with Jasper,
+    \item Improved my skills with the Kanban method,
+    \item Active actor of an application's lifecycle in TMA,
+    \item Trainer for newcomers to the project.
 \end{itemize}
 $\rightarrow$ Skills: Java/JEE, Hibernate, Spring, Struts, JUnit, Eclipse, PowerAMC, Jasper, CVS, Kanban.
 }   % arguments 3 to 6 are optional
 
 \cventry
 {March\ 2013/\\October 2013}
-{Training and personnal development}{}{}{}
+{Training and personal development}{}{}{}
 {\begin{itemize}
-\item Deepening my knowledge in Java,
-\item Participation in several algorithmic competitions,
-\item Refresher course in JEE and deepening of the basics acquired during my studies,
-\item Realisation of personal projects,
-\item Technology watch.
+    \item Deepening my knowledge in Java,
+    \item Participation in several algorithmic competitions,
+    \item Refresher course in JEE and deepening of the basics acquired during my studies,
+    \item Realisation of personal projects,
+    \item Technology watch.
 \end{itemize}
 }   % arguments 3 to 6 are optional
 
@@ -195,15 +215,15 @@ $\rightarrow$ Skills: Java/JEE, Hibernate, Spring, Struts, JUnit, Eclipse, Power
 {Stevenage - United Kingdom}
 {}
 {\begin{itemize}
-\item Development of embedded code in C for the Lisa PathFinder project,
-\item Responsible for unit testing and open-loop testing,
-\item Functional analyst,
-\item An active member of the embedded software lifecycle,
-\item Installation, maintenance and optimisation of the development environment,
-\item Scripting to automate heavy redundant tasks,
-\item Optimise the performance of different tests and create reporting tools,
-\item Code review (bidirectional code reviews) and quality code analysis,
-\item Responsible for the training of new developers.
+    \item Development of embedded code in C for the Lisa PathFinder project,
+    \item Responsible for unit testing and open-loop testing,
+    \item Functional analyst,
+    \item An active member of the embedded software lifecycle,
+    \item Installation, maintenance and optimisation of the development environment,
+    \item Scripting to automate heavy redundant tasks,
+    \item Optimise the performance of different tests and create reporting tools,
+    \item Code review (bidirectional code reviews) and quality code analysis,
+    \item Responsible for the training of new developers.
 \end{itemize}
 $\rightarrow$ Skills: GNU/Linux, C, MISRA, RTEMS, Java, Script Shell, Makefile, Eclipse, ClearCase, ClearQuest, Cantata++, VectorCast Cover, Rulechecker, Logiscope, Doors.
 }   % arguments 3 to 6 are optional
@@ -215,125 +235,61 @@ $\rightarrow$ Skills: GNU/Linux, C, MISRA, RTEMS, Java, Script Shell, Makefile, 
 {Stevenage - United Kingdom}
 {}
 {\begin{itemize}
-\item Support for project resumption (stop subcontracting),
-\item Implementation of a new strategy for Unit Tests,
-\item Design of a Unit Test library to replace Cantata++ (reverse engineering).
+    \item Support for project resumption (stop subcontracting),
+    \item Implementation of a new strategy for Unit Tests,
+    \item Design of a Unit Test library to replace Cantata++ (reverse engineering).
 \end{itemize}
 $\rightarrow$ Skills: GNU/Linux, C, Java, Script Shell, Makefile, Eclipse, ClearCase, Cantata++, VectorCast Cover.
 }   % arguments 3 to 6 are optional
 
 \cventry
 {June 2010/\\October 2010}
-{Developer - Internship $\mathbf{2^{nd}}$ year}
+{Software Developer - Internship $\mathbf{2^{nd}}$ year}
 {Capgemini}
 {Pau (64)}
 {}
 {\begin{itemize}
-\item Complete redesign of the application and CSS integration,
-\item Rewrite \emph{Gesper} from Visual Basic (heavy client) to C\# and .NET (thin client) for \emph{Total},
-\item Implement massive data export from the oracle database to Excel.
+    \item Complete redesign of the application and CSS integration,
+    \item Rewrite \emph{Gesper} from Visual Basic (heavy client) to C\# and .NET (thin client) for \emph{Total},
+    \item Implement massive data export from the oracle database to Excel.
 \end{itemize}
 $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 }   % arguments 3 to 6 are optional
 
-
-\section{Trainer experiences}
-
-\cventry
-{April 2017}
-{Zenika Consultant - MongoDB Trainer}
-{Académie de Rennes}
-{Rennes}
-{}
-{\begin{itemize}
-\item MongoDB Administration Training (3 days),
-\item Official Trainer, validated by MongoDB Inc.
-\end{itemize}
-}   % arguments 3 to 6 are optional
+\section{Conferences \& Publications}\label{sec:publications}
 
 \cventry
-{November 2016}
-{Zenika Consultant - MongoDB Trainer}
-{Inter-companies}
-{Paris}
+{2018-2024}
+{Conferences \& YouTube videos}
+{Some examples}
 {}
-{\begin{itemize}
-\item MongoDB Essentials Training (4 days),
-\item Official Trainer, validated by MongoDB Inc.
-\end{itemize}
-}   % arguments 3 to 6 are optional
+{MongoDB}
+{
+    Java \& CSFLE: \url{https://www.youtube.com/watch?v=tZSH--qwdcE}\\
+    Java \& Spring Boot \& Spring Data \& CSFLE: \url{https://www.youtube.com/watch?v=YePIQimYnxI}\\
+    Big Data Europe Nov 2022: \url{https://www.youtube.com/watch?v=KOd8sAEYnFM}\\
+    GraphQL Galaxy 2021: \url{https://www.youtube.com/watch?v=ATPnI3DGeLM}\\
+    Data Minutes 2021: \url{https://www.youtube.com/watch?v=bURDlvtINQ0}\\
+    DevFest Toulouse 2023 (French): \url{https://www.youtube.com/watch?v=Sip3Q1G8498}
+}
 
 \cventry
-{January 2016}
-{Zenika Consultant - Java Trainer}
-{SFR-Numéricable}
-{Paris}
+{2018-2024}
+{Blog posts}
+{Many missing or removed since I left}
 {}
-{\begin{itemize}
-\item Java Beginner Training (4 days).
-\end{itemize}
-}   % arguments 3 to 6 are optional
+{MongoDB}
+{\url{https://www.mongodb.com/developer/search/?s=maxime+beugnet\&sortMode=0}\\\url{https://www.mongodb.com/company/blog/authors/maxime-beugnet}}
 
 \cventry
-{January 2016}
-{Zenika Consultant - Java Trainer}
-{SFR-Numéricable}
-{Paris}
+{8th April 2016}
+{Fuites de données via MongoDB : « Ce n’est pas une faille, c’est un problème de culture »}
 {}
-{\begin{itemize}
-\item Java Beginner and Advanced custom made (4 jours).
-\item Help and advices to rework a Java Project.
-\end{itemize}
-}   % arguments 3 to 6 are optional
-
-\cventry
-{December 2015}
-{Zenika Consultant - MongoDB Trainer}
-{Inter-companies}
-{Paris}
+{Zdnet}
 {}
-{\begin{itemize}
-\item MongoDB Essentials Training (4 days),
-\item Official Trainer, validated by MongoDB Inc.
-\end{itemize}
-}   % arguments 3 to 6 are optional
+{http://www.zdnet.fr/actualites/fuites-de-donnees-via-mongodb-ce-n-est-pas-une-faille-c-est-un-probleme-de-culture-39835268.htm}   % arguments 3 to 6 are optional
 
-\cventry
-{November 2015}
-{Zenika Consultant - Java Trainer}
-{SFR-Numéricable}
-{Paris}
-{}
-{\begin{itemize}
-\item Java Beginner Training (4 days).
-\end{itemize}
-}   % arguments 3 to 6 are optional
-
-\cventry
-{October 2015}
-{Zenika Consultant - MongoDB Trainer}
-{Inter-companies}
-{Paris}
-{}
-{\begin{itemize}
-\item MongoDB Essentials Training (3 days),
-\item Official Trainer, validated by MongoDB Inc.
-\end{itemize}
-}   % arguments 3 to 6 are optional
-
-\cventry
-{10-12 \& 16-19\\ June 2015}
-{Zenika Consultant - MongoDB Trainer}
-{ATOS Worldline}
-{Seclin and Lyon}
-{}
-{\begin{itemize}
-\item Formation MongoDB Essentials (3 jours),
-\item Official Trainer, validated by MongoDB Inc.
-\end{itemize}
-}   % arguments 3 to 6 are optional
-
-\section{Education and Trainings}
+\section{Education and Training}\label{sec:education-and-training}
 
 \cventry{December 2016}
 {Couchbase CD210 - Data Modeling, Querying and Tuning using N1QL}
@@ -368,14 +324,14 @@ $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 {MongoDB, Inc}
 {}
 {}
-{https://university.mongodb.com/exams/verify\_certificate - numéro : 497-369-558}
+{https://university.mongodb.com/exams/verify\_certificate - Number: 497-369-558}
 
 \cventry{January 2015}
 {MongoDB Developer Official Certification}
 {MongoDB, Inc}
 {}
 {}
-{https://university.mongodb.com/exams/verify\_certificate - numéro : 187-063-954}
+{https://university.mongodb.com/exams/verify\_certificate - Number: 187-063-954}
 
 \cventry{July 2014}
 {Hadoop Training}
@@ -400,7 +356,7 @@ $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 
 \cventry{2008--2011}
 {Diploma in Computer Engineering}
-{\'Ecole Internationale des Sciences du Traitement de l’Information (EISTI)}
+{\'Ecole Internationale des Sciences du Traitement de l’Information (EISTI now called CY Tech)}
 {Pau (64) and Cergy-Pontoise (95)}
 {}
 {Option Software Engineering}
@@ -419,46 +375,132 @@ $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 {With honours}
 {Option Special Mathematics.}
 
-\section{Publications}
+\section{Trainer Experiences}\label{sec:trainer-experiences}
+
 \cventry
-{8th April 2016}
-{Fuites de données via MongoDB : « Ce n’est pas une faille, c’est un problème de culture »}
+{April 2017}
+{Zenika Consultant - MongoDB Trainer}
+{Académie de Rennes}
+{Rennes}
 {}
-{Zdnet}
-{}
-{http://www.zdnet.fr/actualites/fuites-de-donnees-via-mongodb-ce-n-est-pas-une-faille-c-est-un-probleme-de-culture-39835268.htm
+{\begin{itemize}
+     \item MongoDB Administration Training (3 days),
+     \item Official Trainer, validated by MongoDB Inc.
+\end{itemize}
 }   % arguments 3 to 6 are optional
 
+\cventry
+{November 2016}
+{Zenika Consultant - MongoDB Trainer}
+{Inter-companies}
+{Paris}
+{}
+{\begin{itemize}
+     \item MongoDB Essentials Training (4 days),
+     \item Official Trainer, validated by MongoDB Inc.
+\end{itemize}
+}   % arguments 3 to 6 are optional
 
-\section{Skills}
+\cventry
+{January 2016}
+{Zenika Consultant - Java Trainer}
+{SFR-Numéricable}
+{Paris}
+{}
+{\begin{itemize}
+     \item Java Beginner Training (4 days).
+\end{itemize}
+}   % arguments 3 to 6 are optional
 
-\subsection{Favourite Technologies}
-\cvline{Java/JEE}{Practising since 2009.} 
-\cvline{Frameworks}{Spring Core, Spring-Boot, Spring-Data, Hibernate, XStream, Mockito, Junit, TestNG, AssertJ, Apache Commons, ...}
-\cvline{NoSQL}{MongoDB, Couchbase, Elastic.}
+\cventry
+{January 2016}
+{Zenika Consultant - Java Trainer}
+{SFR-Numéricable}
+{Paris}
+{}
+{\begin{itemize}
+     \item Java Beginner and Advanced custom-made (4 jours).
+     \item Help and advices to rework a Java Project.
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+\cventry
+{December 2015}
+{Zenika Consultant - MongoDB Trainer}
+{Inter-companies}
+{Paris}
+{}
+{\begin{itemize}
+     \item MongoDB Essentials Training (4 days),
+     \item Official Trainer, validated by MongoDB Inc.
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+\cventry
+{November 2015}
+{Zenika Consultant - Java Trainer}
+{SFR-Numéricable}
+{Paris}
+{}
+{\begin{itemize}
+     \item Java Beginner Training (4 days).
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+\cventry
+{October 2015}
+{Zenika Consultant - MongoDB Trainer}
+{Inter-companies}
+{Paris}
+{}
+{\begin{itemize}
+     \item MongoDB Essentials Training (3 days),
+     \item Official Trainer, validated by MongoDB Inc.
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+\cventry
+{10-12 \& 16-19\\ June 2015}
+{Zenika Consultant - MongoDB Trainer}
+{ATOS Worldline}
+{Seclin and Lyon}
+{}
+{\begin{itemize}
+     \item Formation MongoDB Essentials (3 jours),
+     \item Official Trainer, validated by MongoDB Inc.
+\end{itemize}
+}   % arguments 3 to 6 are optional
+
+\section{Skills}\label{sec:skills}
+
+\subsection{Favorite Technologies}\label{subsec:favorite-technologies}
+\cvline{Java}{Practising since 2009.}
+\cvline{Frameworks}{Spring Core, Spring-Boot, Spring-Data, Mockito, Junit, TestNG, AssertJ, ...}
+\cvline{NoSQL}{MongoDB, Couchbase, Elastic, Kafka.}
 \cvline{SQL}{MySQL, PostgreSQL, PL/SQL.}
-\cvline{BigData}{Hadoop.}
-\cvline{Languages}{C, C\#, Script Shell, Python, HTML5, CSS3, Javascript.}
+\cvline{Big Data}{Hadoop.}
+\cvline{Languages}{Python, JavaScript, Bash.}
+\cvline{Web}{HTML, CSS.}
 \cvline{System}{GNU/Linux.}
-\cvline{Tools}{IntelliJ, Docker, Vagrant, Tomcat, Maven, Git, Subversion.}
-\cvline{Methodologies}{Craftmanship, TDD, Kanban.}
-\cvline{Standards}{W3C, ECSS, MISRA.}
+\cvline{Tools}{IntelliJ, Docker, Vagrant, Tomcat, Maven, Git, Kubernetes.}
+\cvline{Methodologies}{Craftsmanship, TDD, Kanban.}
+\cvline{Standards}{W3C (web), ECSS (space software), MISRA (embedded C).}
 
-\subsection{Languages}
+\subsection{Languages}\label{subsec:languages}
 \cvlanguage{French}{Mother tongue}{}
-\cvlanguage{English}{Fluent}{I lived and worked 2 years in the United Kingdom.}
+\cvlanguage{English}{Fluent}{I lived and worked 2 years in the United Kingdom.\\I've been delivering public conferences in English from 2018 to 2024.}
 \cvlanguage{Spanish}{Academic}{}
 
 %\newpage{}
 
-\section{Meetups \& Conferences}
+\section{Meetups \& Conferences}\label{sec:meetups-&-conferences}
 \cvlistdoubleitem{Paris JUG}{Devoxx 2014 \& 2015 \& 2017}
 \cvlistdoubleitem{Software Craftsmanship Paris}{Docker Paris}
 \cvlistdoubleitem{Paris MongoDB User Group}{Global Day of CodeRetreat}
 \cvlistdoubleitem{Dev4Fun}{}
 %\cvlistitem[+]{Item 3}            % optional other symbol
 
-\section{Programming competitions}
+\section{Programming competitions}\label{sec:programming-competitions}
 %\cvline{hobby 1}{\small Description}
 %\cvline{hobby 2}{\small Description}
 %\cvline{hobby 3}{\small Description}
@@ -466,42 +508,18 @@ $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 \cventry
 {Since 2013}
 {CodinGame}
+{Artificial intelligence competitions with Java \& Python. Top 0.6\%.}
+{}
 {}
 {\url{http://www.codingame.com}}
-{}
-{Monthly artificial intelligence competitions with Java. Top 5000.}
 
 \cventry
-{Since 2012}
+{2012 - 2022}
 {Google Jam Code}
+{Global annual algorithmic problem-solving competition.}
+{}
 {}
 {\url{http://code.google.com/codejam}}
-{}
-{Global annual algorithmic problem solving competition with Java.}
-
-%\cventry
-%{Septembre 2013}
-%{CodinGame}
-%{}
-%{\url{http://www.codingame.com}}
-%{}
-%{Concours de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $226^{e}$ sur 1124 participants.}
-
-%\cventry
-%{Juillet 2013}
-%{CodinGame}
-%{}
-%{\url{http://www.codingame.com}}
-%{}
-%{Concours de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $128^{e}$ sur 759 participants.}
-
-%\cventry
-%{Avril/Mai 2013}
-%{Google Jam Code}
-%{}
-%{\url{http://code.google.com/codejam}}
-%{}
-%{Concours mondial de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $5319^{e}$ sur 21278 participants.}
 
 \cventry
 {August 2012}
@@ -509,33 +527,22 @@ $\rightarrow$ Skills: C\#, .NET, HTML, CSS, PL/SQL.
 {Criteo}
 {}
 {}
-{Algorithmic problem solving contest with Java.\\Final result: Top 100 among 2100 participants.}
-
-%\cventry
-%{Avril/Mai 2012}
-%{Google Jam Code}
-%{}
-%{\url{http://code.google.com/codejam}}
-%{}
-%{Concours mondial de résolution de problèmes algorithmiques; utilisation de Java.\\Résultat final : $1876^{e}$ sur 19464 participants.}
+{Algorithmic problem-solving contest with Java.\\Final result: Top 100 among 2100 participants.}
 
 \cventry
 {January 2012}
 {Queue ICPC Challenge}
 {}
-{\url{http://queue.acm.org/icpc/}}
 {}
-{Articial intelligence tournament with Java.\\Final Results: $13^{th}$ out of 53 participants.}
+{}
+{Articial intelligence tournament with Java.\\Final Results: $13^{th}$ out of 53 participants.\\\url{https://www.inf.ufpr.br/maratona/bccchallenge/3/doc/index.html}}
 
-%\section{Intérêts}
-%\cvlistdoubleitem{Tir à l'arc}{Cinéma}
-%\cvlistdoubleitem{Natation}{Musique}
-%\cvlistdoubleitem{Squash}{Rubik's Cube}
+\section{Hobbies \& Interests}\label{sec:hobbies-&-interests}
 
-% Publications from a BibTeX file
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}       % 'publications' is the name of a BibTeX file
+\cvlistdoubleitem{Mountain biking}{Trekking (especially in the Pyrenees)}
+\cvlistdoubleitem{Video games}{Piano}
+\cvlistdoubleitem{Tennis}{Rubik's cube (under 1min)}
+\cvlistdoubleitem{Scuba diving (PADI certified)}{Vikings}
 
 \end{document}
 
